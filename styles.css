@@ -1,0 +1,250 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* To contain rounded corners of inner elements if needed */
+}
+
+/* Header */
+.header {
+    background-color: #fff; /* Or a lighter shade if needed */
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.breadcrumbs {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Tabs Navigation */
+.tabs {
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0; /* More prominent border for tabs */
+}
+
+.tabs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.tabs ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #555;
+    border-bottom: 2px solid transparent; /* For active state underline effect */
+}
+
+.tabs ul li.active {
+    color: #3498db; /* Active tab color */
+    border-bottom: 2px solid #3498db; /* Active tab underline */
+}
+.tabs ul li.more {
+    margin-left: auto; /* Push 'more' tab to the right */
+}
+
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+}
+
+.product-info-section {
+    margin-bottom: 20px;
+}
+
+.section-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr; /* Adjust proportions as needed */
+    gap: 20px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+.form-group label a {
+    color: #3498db;
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.input-with-limit {
+    display: flex;
+    align-items: center;
+    position: relative; /* For positioning limit label */
+}
+
+.input-with-limit input[type="text"] {
+    flex-grow: 1;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* To include padding in width */
+    margin-bottom: 5px; /* Space before example text */
+}
+
+textarea {
+    height: 100px; /* Adjust as needed */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+select {
+    appearance: none; /* Remove default arrow in some browsers */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    padding-right: 30px; /* Space for arrow */
+}
+
+
+.limit-label {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #777;
+}
+
+.example-text {
+    font-size: 13px;
+    color: #777;
+    margin-top: 3px;
+}
+
+.text-al-button {
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 5px;
+    align-self: flex-start; /* Align to the start in flex container */
+}
+
+.select-categories-wrapper {
+    position: relative; /* For positioning dropdown arrow if needed */
+}
+
+
+/* Image & Video Box */
+.image-video-box {
+    background-color: #f9f9f9;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-video-box .box-header {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #555;
+}
+.image-video-box .box-header .help-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #ddd;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    margin-left: 5px;
+    cursor: pointer; /* Indicate it's interactive */
+}
+.image-video-box .box-header .asterisk {
+    color: red;
+    margin-left: 2px;
+}
+
+
+.choose-image-button {
+    background-color: #eee;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* Footer Buttons */
+.footer {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: right; /* Align buttons to the right */
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.save-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.cancel-button {
+    background-color: #f44336; /* Reddish/Grey - adjust as needed */
+    color: white;
+    background-color: #e0e0e0;
+    color: #555;
+}
